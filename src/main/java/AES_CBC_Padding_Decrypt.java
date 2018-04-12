@@ -16,19 +16,6 @@ import java.util.Base64;
  * @author blindcant
  * @version 0.1 - 2018-02-23
  */
-
-/**
- * <h1>PROGRAM NAME GOES HERE</h1>
- * <p>
- * This program
- * </p>
- * <p>
- * tags:	<insert concept tags here for training code only>
- * </p>
- *
- * @author blindcant
- * @version 0.1 - 2018-03-08
- */
 public class AES_CBC_Padding_Decrypt
 {
 	//@@@ INSTANCE VARIABLES @@@
