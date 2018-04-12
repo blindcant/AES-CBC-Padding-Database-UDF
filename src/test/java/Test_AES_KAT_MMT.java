@@ -23,13 +23,13 @@ public class Test_AES_KAT_MMT
 	private static final String CIPHER_ALGORITHM_MODE_PADDING = "AES/CBC/PKCS5PADDING";
 	private static final String CIPHER_ALGORITHM_MODE_NOPADDING = "AES/CBC/NoPadding";
 	private int testCounter = 0;
-
+	
 	//MAIN METHOD
 	public static void main(String[] args)
 	{
 		Test_AES_KAT_MMT run1 = new Test_AES_KAT_MMT();
 	}
-
+	
 	//CONSTRUCTOR(S)
 	public Test_AES_KAT_MMT()
 	{
@@ -46,7 +46,7 @@ public class Test_AES_KAT_MMT
 		String katIvBase16 = "2fe2b333ceda8f98f4a99b40d2cd34a8";
 		String katPlaintextBase16 = "45cf12964fc824ab76616ae2f4bf0822";
 		String katCiphertextBase16 = "0f61c4d44c5147c03c195ad7e2cc12b2";
-
+		
 		//output variables
 		String computedCiphertext = encrypt(katPlaintextBase16, katSecretKeyBase16, katIvBase16);
 		String computedPlaintext = decrypt(computedCiphertext, katSecretKeyBase16, katIvBase16);
@@ -55,9 +55,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 2
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -73,9 +73,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 3
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -91,9 +91,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 4
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -110,9 +110,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 5
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -128,9 +128,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//reset variables for next tests
 		testCounter = 0;
 		katSecretKeyBase16 = null;
@@ -139,11 +139,12 @@ public class Test_AES_KAT_MMT
 		katCiphertextBase16 = null;
 		computedCiphertext = null;
 		computedPlaintext = null;
-
+		
 		System.out.println("\n***************");
 		System.out.println("* Deccryption *");
-		System.out.println("***************\n");;
-
+		System.out.println("***************\n");
+		;
+		
 		//TEST 1
 		//input variables
 		katSecretKeyBase16 = "6a7082cf8cda13eff48c8158dda206ae";
@@ -155,9 +156,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 2
 		//input variables
 		katSecretKeyBase16 = "625eefa18a4756454e218d8bfed56e36";
@@ -169,9 +170,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 3
 		//input variables
 		katSecretKeyBase16 = "fd6e0b954ae2e3b723d6c9fcae6ab09b";
@@ -183,9 +184,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 4
 		//input variables
 		katSecretKeyBase16 = "7b1ab9144b0239315cd5eec6c75663bd";
@@ -197,9 +198,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 5
 		//input variables
 		katSecretKeyBase16 = "36466b6bd25ea3857ea42f0cac1919b1";
@@ -211,9 +212,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		// ### 196bit key test ###
 		System.out.println("\n##################");
 		System.out.println("# AES 196bit Key #");
@@ -229,7 +230,7 @@ public class Test_AES_KAT_MMT
 		katCiphertextBase16 = null;
 		computedCiphertext = null;
 		computedPlaintext = null;
-
+		
 		//TEST 1
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -237,7 +238,7 @@ public class Test_AES_KAT_MMT
 		katIvBase16 = "531ce78176401666aa30db94ec4a30eb";
 		katPlaintextBase16 = "c51fc276774dad94bcdc1d2891ec8668";
 		katCiphertextBase16 = "70dd95a14ee975e239df36ff4aee1d5d";
-
+		
 		//output variables
 		computedCiphertext = encrypt(katPlaintextBase16, katSecretKeyBase16, katIvBase16);
 		computedPlaintext = decrypt(computedCiphertext, katSecretKeyBase16, katIvBase16);
@@ -246,9 +247,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 2
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -264,9 +265,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 3
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -282,9 +283,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 4
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -301,9 +302,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 5
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -319,9 +320,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//reset variables for next tests
 		//reset variables for next tests
 		testCounter = 0;
@@ -331,11 +332,12 @@ public class Test_AES_KAT_MMT
 		katCiphertextBase16 = null;
 		computedCiphertext = null;
 		computedPlaintext = null;
-
+		
 		System.out.println("\n***************");
 		System.out.println("* Deccryption *");
-		System.out.println("***************\n");;
-
+		System.out.println("***************\n");
+		;
+		
 		//TEST 1
 		//input variables
 		katSecretKeyBase16 = "8e2740fba157aef2422e442312d15c14d312553684fcdc15";
@@ -347,9 +349,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 2
 		//input variables
 		katSecretKeyBase16 = "0ac0d2add273d1a260c432c662b4be4d8d366edc3f402e40";
@@ -361,9 +363,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 3
 		//input variables
 		katSecretKeyBase16 = "3915d786c786731cfe35abe39fac714f5fa32c7ef3c6681b";
@@ -375,9 +377,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 4
 		//input variables
 		katSecretKeyBase16 = "92317d4d38168a359118a0df0b7b45cbfdcc2011e7175d3c";
@@ -389,9 +391,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 5
 		//input variables
 		katSecretKeyBase16 = "cd00048ce8ead5b5dff2346a86eac594b2a4194ca99fc89f";
@@ -403,9 +405,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		// ### 256bit key test ###
 		// ### 196bit key test ###
 		System.out.println("\n##################");
@@ -422,7 +424,7 @@ public class Test_AES_KAT_MMT
 		katCiphertextBase16 = null;
 		computedCiphertext = null;
 		computedPlaintext = null;
-
+		
 		//TEST 1
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -430,7 +432,7 @@ public class Test_AES_KAT_MMT
 		katIvBase16 = "851e8764776e6796aab722dbb644ace8";
 		katPlaintextBase16 = "6282b8c05c5c1530b97d4816ca434762";
 		katCiphertextBase16 = "6acc04142e100a65f51b97adf5172c41";
-
+		
 		//output variables
 		computedCiphertext = encrypt(katPlaintextBase16, katSecretKeyBase16, katIvBase16);
 		computedPlaintext = decrypt(computedCiphertext, katSecretKeyBase16, katIvBase16);
@@ -439,9 +441,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 2
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -457,9 +459,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 3
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -475,9 +477,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 4
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -494,9 +496,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 5
 		System.out.println("Test " + testCounter++);
 		//input variables
@@ -512,9 +514,9 @@ public class Test_AES_KAT_MMT
 		System.out.println("Computed ciphertext:\t" + computedCiphertext);
 		System.out.println("Do they match?\t\t\t" + katCiphertextBase16.equals(computedCiphertext) + "\n");
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//reset variables for next tests
 		//reset variables for next tests
 		testCounter = 0;
@@ -524,11 +526,12 @@ public class Test_AES_KAT_MMT
 		katCiphertextBase16 = null;
 		computedCiphertext = null;
 		computedPlaintext = null;
-
+		
 		System.out.println("\n***************");
 		System.out.println("* Deccryption *");
-		System.out.println("***************\n");;
-
+		System.out.println("***************\n");
+		;
+		
 		//TEST 1
 		//input variables
 		katSecretKeyBase16 = "43e953b2aea08a3ad52d182f58c72b9c60fbe4a9ca46a3cb89e3863845e22c9e";
@@ -540,9 +543,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 2
 		//input variables
 		katSecretKeyBase16 = "addf88c1ab997eb58c0455288c3a4fa320ada8c18a69cc90aa99c73b174dfde6";
@@ -554,9 +557,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 3
 		//input variables
 		katSecretKeyBase16 = "54682728db5035eb04b79645c64a95606abb6ba392b6633d79173c027c5acf77";
@@ -568,9 +571,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 4
 		//input variables
 		katSecretKeyBase16 = "7482c47004aef406115ca5fd499788d582efc0b29dc9e951b1f959406693a54f";
@@ -582,9 +585,9 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
-
+		
 		//TEST 5
 		//input variables
 		katSecretKeyBase16 = "3ae38d4ebf7e7f6dc0a1e31e5efa7ca123fdc321e533e79fedd5132c5999ef5b";
@@ -596,25 +599,24 @@ public class Test_AES_KAT_MMT
 		//test run
 		System.out.println("Test " + testCounter++);
 		System.out.println("Original plaintext:\t\t" + katPlaintextBase16);
-		System.out.println("Decrypted plaintext:\t" +computedPlaintext);
+		System.out.println("Decrypted plaintext:\t" + computedPlaintext);
 		System.out.println("Do they match?\t\t\t" + katPlaintextBase16.equals(computedPlaintext) + "\n");
 	}
-
-
+	
+	
 	//METHODS
 	// https://stackoverflow.com/questions/8890174/in-java-how-do-i-convert-a-hex-string-to-a-byte/19119453#19119453
-	public static byte[] hexStringToByteArray(String inputStringBase16) {
+	public static byte[] hexStringToByteArray(String inputStringBase16)
+	{
 		int len = inputStringBase16.length();
 		byte[] dataBytesBase2 = new byte[len / 2];
-		for (int i = 0; i < len; i += 2)
-		{
-			dataBytesBase2[i / 2] = (byte) ((Character.digit(inputStringBase16.charAt(i), 16) << 4)
-					+ Character.digit(inputStringBase16.charAt(i+1), 16));
+		for (int i = 0; i < len; i += 2) {
+			dataBytesBase2[i / 2] = (byte) ((Character.digit(inputStringBase16.charAt(i), 16) << 4) + Character.digit(inputStringBase16.charAt(i + 1), 16));
 		}
 		return dataBytesBase2;
 	}
-
-
+	
+	
 	/**
 	 * This method is use for the MMT and KAT tests
 	 *
@@ -626,84 +628,82 @@ public class Test_AES_KAT_MMT
 		//Use a BigInteger so we can store arbitrarily large numbers.  Radix 16 = hex, radix 2 = binary
 		return new BigInteger(inputStringBase16, 16).toString(2);
 	}
-
+	
 	private String encrypt(String inputPlaintextBase16, String inputKeyBase16, String inputIvBase16)
 	{
-		try
-		{
+		try {
 			// JAVA Cryptography
 			// https://docs.oracle.com/javase/7/docs/technotes/guides/security/crypto/CryptoSpec.html#Introduction
-
+			
 			// 16 BYTE (128 BIT) KEY or 24 BYTE (196 BIT) KEY or 32 BYTES (256 BIT) KEY
 			// https://docs.oracle.com/javase/7/docs/api/javax/crypto/spec/SecretKeySpec.html
 			SecretKeySpec secretKey = new SecretKeySpec(hexStringToByteArray(inputKeyBase16), CIPHER_ALGORITHM);
-
+			
 			// 16 BYTE (128 BIT) INITIALISATION VECTOR
 			// https://docs.oracle.com/javase/7/docs/api/javax/crypto/spec/IvParameterSpec.html
 			// generate garbage IV
 			byte[] ivBytesArrayBase2 = hexStringToByteArray(inputIvBase16);
 			IvParameterSpec iv = iv = new IvParameterSpec(ivBytesArrayBase2);
-
+			
 			// CRYPTORGAPY CIPHER
 			// https://docs.oracle.com/javase/7/docs/technotes/guides/security/StandardNames.html#Cipher
 			// https://docs.oracle.com/javase/7/docs/technotes/guides/security/crypto/CryptoSpec.html#Cipher
 			Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM_MODE_NOPADDING);
-
+			
 			// ENCRYPTION PHASE
 			// https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html#init(int,%20java.security.Key,%20java.security.SecureRandom)
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey, iv);
 			byte[] ciphertextBytesBase2 = cipher.doFinal(hexStringToByteArray(inputPlaintextBase16));
-
+			
 			// CONVERT BINARY TO BASE64 / BASE16
 			// https://docs.oracle.com/javase/8/docs/api/java/util/Base64.html
 			String ciphertextBase16 = new String(DatatypeConverter.printHexBinary(ciphertextBytesBase2).toLowerCase());
 			return ciphertextBase16;
-
-
-		} catch (Exception ex)
-		{
+			
+			
+		}
+		catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		return null;
 	}
-
+	
 	/**
 	 * This method is used to read in a String that is encrypted with AES 128 CBC PCKS#5 Padding.
 	 * The String is decrypted it via the supplied secret key and the prepended IV.
 	 *
 	 * @param inputCiphertextBase16 - this it user supplied ciphertext to be decrypted, usually in Base64, can be Base16
-	 * @param inputKeyBase16 - this is the user supplied secret key
-	 * @param inputIvBase16 - this is only used to do the KAT decrypt tests.
+	 * @param inputKeyBase16        - this is the user supplied secret key
+	 * @param inputIvBase16         - this is only used to do the KAT decrypt tests.
 	 * @return - this is the plaintext returned after decryption
 	 */
 	private String decrypt(String inputCiphertextBase16, String inputKeyBase16, String inputIvBase16)
 	{
-		try
-		{
+		try {
 			String ciphertextBase64 = null;
 			// KEY
 			SecretKeySpec secretKey = new SecretKeySpec(hexStringToByteArray(inputKeyBase16), CIPHER_ALGORITHM);
-
+			
 			// INITIALISATION VECTOR
 			//convert the IV back to a bytes
 			byte[] ivBytesBase2 = hexStringToByteArray(inputIvBase16);
 			// recreate IV
 			IvParameterSpec iv = new IvParameterSpec(ivBytesBase2);
-
+			
 			// CRYPTORGAPY CIPHER
 			Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM_MODE_NOPADDING);
-
+			
 			// DECRYPTION PHASE
 			//convert hex to binary
 			byte[] ciphertextBytesBase2 = hexStringToByteArray(inputCiphertextBase16);
 			//decrypt stuff
 			cipher.init(Cipher.DECRYPT_MODE, secretKey, iv);
 			byte[] plaintextBytesBase2 = cipher.doFinal(ciphertextBytesBase2);
-
+			
 			// OUTPUT
 			return new String(DatatypeConverter.printHexBinary(plaintextBytesBase2).toLowerCase());
-		} catch (Exception ex)
-		{
+		}
+		catch (Exception ex) {
 			ex.printStackTrace();
 		}
 		return null;

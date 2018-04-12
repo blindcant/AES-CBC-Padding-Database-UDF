@@ -24,19 +24,17 @@ public class Test_Encrypt_And_Decrypt
 		String[] passwords = {"0123456789ABCDEF", "0123456789ABCDEF01234567", "0123456789ABCDEF0123456789ABCDEF"};
 		String[] plaintext = new String[3];
 		String originalText = "This the text that you are not allowed to see my friend. Go away!";
-
+		
 		// Testing
 		System.out.println("@@@ AES CBC Padding Testing @@@");
 		System.out.println("### Encryption Round ###");
-		for (int i = 0; i < passwords.length; i++)
-		{
+		for (int i = 0; i < passwords.length; i++) {
 			ciphertext[i] = encryptRuntime.encrypt(originalText, passwords[i]);
 			System.out.println(cipherMode[i] + " - The ciphertext is " + ciphertext[i]);
 		}
-
+		
 		System.out.println("\n### Decryption Round ###");
-		for (int i = 0; i < passwords.length; i++)
-		{
+		for (int i = 0; i < passwords.length; i++) {
 			plaintext[i] = decryptRuntime.decrypt(ciphertext[i], passwords[i]);
 			System.out.println(cipherMode[i] + " - The plaintext is " + plaintext[i]);
 		}

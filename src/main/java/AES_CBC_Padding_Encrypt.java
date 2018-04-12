@@ -1,25 +1,21 @@
-import javax.crypto.Cipher;
-import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.Cipher;
 import java.nio.charset.Charset;
 import java.security.SecureRandom;
-import java.util.Base64;
-
 //Java 1.6
 //import org.apache.commons.codec.binary.Base64;
 //Java 1.8 only
+import java.util.Base64;
 
 /**
- * <h1>PROGRAM NAME GOES HERE</h1>
+ * <h1>AES CBC Padding Encryption</h1>
  * <p>
- * This program
- * </p>
- * <p>
- * tags:	<insert concept tags here for training code only>
+ * This program performs AES 128, 192, or 256 encryption using CBC and PKCS#5 padding.
  * </p>
  *
  * @author blindcant
- * @version 0.1 - 2018-03-08
+ * @version 0.1 - 2018-02-23
  */
 public class AES_CBC_Padding_Encrypt
 {
